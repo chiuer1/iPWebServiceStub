@@ -3,6 +3,8 @@
 <table>
   <thead>
     <tr>
+      <th>Sitename</th>
+      <th>Sitedetails</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +14,8 @@
   <tbody>
     <% @sites.each do |site| %>
       <tr>
+        <td><%= site.siteName %></td>
+        <td><%= site.siteDetails %></td>
         <td><%= link_to 'Show', site %></td>
         <td><%= link_to 'Edit', edit_site_path(site) %></td>
         <td><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>

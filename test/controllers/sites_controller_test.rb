@@ -18,7 +18,7 @@ class SitesControllerTest < ActionController::TestCase
 
   test "should create site" do
     assert_difference('Site.count') do
-      post :create, site: {  }
+      post :create, site: { siteDetails: @site.siteDetails, siteName: @site.siteName }
     end
 
     assert_redirected_to site_path(assigns(:site))
@@ -35,7 +35,7 @@ class SitesControllerTest < ActionController::TestCase
   end
 
   test "should update site" do
-    patch :update, id: @site, site: {  }
+    patch :update, id: @site, site: { siteDetails: @site.siteDetails, siteName: @site.siteName }
     assert_redirected_to site_path(assigns(:site))
   end
 
